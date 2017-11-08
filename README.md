@@ -23,13 +23,13 @@ Para desarrollar el juego debemos tener en cuenta ciertos puntos:
 Debes entregar **un repositorio de GitHub** que contenga:
 
 ```
-1. Carpeta **`assets`** que contenga el otros archivos utiles para la página web .
-2. Carpeta **`css`** que contenga el archivo **`style.css`** .
-    - Archivo **`style.css`** con los estilos que se aplican al HTML.
-3. Carpeta **`js`** que contenga el archivo **`app.js`** .
-    - Archivo **`app.js`** con el **código** de tu solución.
-4. Archivo **`index.html`** vinculado a **`style.css`** y **`app.js`**.
-5. Archivo **`README.md`** que explique el programa.
+1. Carpeta **assets** que contenga el otros archivos utiles para la página web .
+2. Carpeta **css** que contenga el archivo **style.css** .
+    - Archivo **style.css** con los estilos que se aplican al HTML.
+3. Carpeta **js** que contenga el archivo **app.js** .
+    - Archivo **app.js** con el **código** de tu solución.
+4. Archivo **index.html** vinculado a **style.css** y **app.js**.
+5. Archivo **README.md** que explique el programa.
 
 ```
 
