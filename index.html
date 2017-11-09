@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+		<link href="https://fonts.googleapis.com/css?family=Acme|Hammersmith+One" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+        <header id="title">
+            <h1>JUEGA TIC TAC TOE </h1>
+        </header>
+        <section id="form">
+<!-- Panel de usuarios, para el ingreso de su nickname-->
+            <div>
+                <label class= "nick-name" id="playerX">Jugador 1 :</label>
+                <input type="text" placeholder="Ingrese su Nickname" id="nameX" value="">
+
+                <label class="nick-name" id="playerO">Jugador 2 :</label>
+                <input type="text" placeholder="Ingrese su Nickname" id="nameO" value="">
+            </div> 
+            <div>
+                <button type="button" onclick="play()">JUGAR</button>
+            </div>
+<!-- Panel de juego, solo se mostrara cuando los usuarios empiecen a jugar -->
+            <div class="display-none" id="container">
+                <div>
+                    <center>
+                        <table class="board">
+                            <tr class="board-rows">
+                                <td class="board-cell" onclick="setSymbol( 1 )" id="box1"></td>
+                                <td class="board-cell" onclick="setSymbol( 2 )" id="box2"></td>
+                                <td class="board-cell" onclick="setSymbol( 3 )" id="box3"></td>
+                            </tr>
+                            <tr class="board-rows">
+                                <td class="board-cell" onclick="setSymbol( 4 )" id="box4"></td>
+                                <td class="board-cell" onclick="setSymbol( 5 )" id="box5"></td>
+                                <td class="board-cell" onclick="setSymbol( 6 )" id="box6"></td>
+                            </tr>
+                            <tr class="board-rows">
+                                <td class="board-cell" onclick="setSymbol( 7 )" id="box7"></td>
+                                <td class="board-cell" onclick="setSymbol( 8 )" id="box8"></td>
+                                <td class="board-cell" onclick="setSymbol( 9 )" id="box9"></td>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+<!-- Panel del contador para jugador X y O, se mantendra oculto con los estilos display:none; -->
+                <input type="text" value="0" class="inputs input-X" id="input-X1">
+                <input type="text" value="0" class="inputs input-X" id="input-X2">
+                <input type="text" value="0" class="inputs input-X" id="input-X3">
+                <input type="text" value="0" class="inputs input-X" id="input-X4">
+                <input type="text" value="0" class="inputs input-X" id="input-X5">
+                <input type="text" value="0" class="inputs input-X" id="input-X6">
+                <input type="text" value="0" class="inputs input-X" id="input-X7">
+                <input type="text" value="0" class="inputs input-X" id="input-X8">
+                <input type="text" value="0" class="inputs input-X" id="input-X9">
+
+                <input type="text" value="0" class="inputs input-O" id="input-O1">
+                <input type="text" value="0" class="inputs input-O" id="input-O2">
+                <input type="text" value="0" class="inputs input-O" id="input-O3">
+                <input type="text" value="0" class="inputs input-O" id="input-O4">
+                <input type="text" value="0" class="inputs input-O" id="input-O5">
+                <input type="text" value="0" class="inputs input-O" id="input-O6">
+                <input type="text" value="0" class="inputs input-O" id="input-O7">
+                <input type="text" value="0" class="inputs input-O" id="input-O8">
+                <input type="text" value="0" class="inputs input-O" id="input-O9">
+
+                <hr>
+                <div>
+                    <button type="reset" onclick="reset()">NUEVO JUEGO</button>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <p> Copyright © 2017 by Margarita, All Rights Reserved.</p>
+        </footer>
+        <script type="text/javascript" src="js/app.js"></script> 
+	</body>
+</html>
