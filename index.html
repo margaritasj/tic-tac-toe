@@ -13,7 +13,7 @@
 
 	<body>
         <header id="title">
-            <h1>JUEGA TIC TAC TOE </h1>
+            <a href="#"><h1> <i class="fa fa-gamepad" aria-hidden="true"></i> JUEGA TIC TAC TOE </h1></a>
         </header>
         <section id="form">
 <!-- Panel de usuarios, para el ingreso de su nickname-->
@@ -25,7 +25,7 @@
                 <input type="text" placeholder="Ingrese su Nickname" id="nameO" value="">
             </div> 
             <div>
-                <button type="button" onclick="play()">JUGAR</button>
+                <button class="btn" type="button" onclick="play()">JUGAR</button>
             </div>
 <!-- Panel de juego, solo se mostrara cuando los usuarios empiecen a jugar -->
             <div class="display-none" id="container">
@@ -71,9 +71,8 @@
                 <input type="text" value="0" class="inputs input-O" id="input-O8">
                 <input type="text" value="0" class="inputs input-O" id="input-O9">
 
-                <hr>
                 <div>
-                    <button type="reset" onclick="reset()">NUEVO JUEGO</button>
+                    <button class="btn" type="reset" onclick="reset()">NUEVO JUEGO</button>
                 </div>
             </div>
 
