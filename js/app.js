@@ -1,54 +1,55 @@
-var player = "X";
-var counter = 0;
+/* jshint browser: true */
 
-// Abre div container y setea jugador activo
+var player = "X"; // Var para el jugador
+var counter = 0; // Var para los clics
+
+// La funcion para el boton jugar
 var play = function(){ 
-
+    // Abre div container y setea jugador activo
 	var name1 = document.getElementById('nameX').value;
 	var name2 = document.getElementById('nameO').value;
-// div container se mantendra oculto hasta que se que ingresen los nombres
-	if( name1 == '' || name2 == '' ){
-        
-		document.getElementById('container').classList.add('display-none');
+
+    if( name1 === '' || name2 === '' ){
+        //document.getElementById('container').classList.add('display-none');
 		alert('Por favor llene los nombres');
 		return;
 	}
-
+    
 	document.getElementById('player'+ player).classList.add('activo');
-
     document.getElementById('container').classList.remove('display-none');
-
 };
- // Para los clics
+console.log(play);
+
+ // Funcion llenar el X/O dependiendo del turno del jugador
 var setSymbol = function( me ) {
     console.log( me );
-    
 	var box = document.getElementById('box'+me);
 	if( box.textContent === ""){
-		// Poniendo al box TD, la variable del jugador actual
-		document.getElementById('player'+player).classList.remove('activo');
+		// Poniendo a los tds, la variable del jugador actual
+        document.getElementById('player'+player).classList.remove('activo');
 		// Seteando en box
 		box.innerHTML = player; // SETEO X o O
 		document.getElementById('input-'+player+me).value = 1;
 
 		counter++;
 		console.log( counter );
-        
-		if( counter >= 5 ){
-			validate( player );
+        //Escribir X u O
+        if( counter >= 5 ){
+            validate( player );
 		}
 		if( player == 'X' ){
 			player = "O";
 		} else { // Sino sera O
 			player = "X";
 		}
-		document.getElementById('player'+player).classList.add('activo');
+        document.getElementById('player'+player).classList.add('activo');  
 	}
-
+   
 };
 console.log(setSymbol);
 
 var validate = function( player ){
+    
 
 	var name = document.getElementById('name'+player).value;
 
@@ -62,7 +63,8 @@ var validate = function( player ){
 	var input8 = document.getElementById('input-'+player+8).value;
 	var input9 = document.getElementById('input-'+player+9).value;
 
-	if( ( input1 * input2 * input3 ) == 1 ){
+	
+    if( ( input1 * input2 * input3 ) == 1 ){
 		alert('Bien ' + name + ' ganaste!!');
 		return;
 	}
@@ -99,19 +101,29 @@ var validate = function( player ){
 	}
 };
 
+//Funcion para el boton reset 
 var reset = function(){
+   
 	var elem = document.getElementsByClassName('board-cell');
+    // Recorremos todas las celdas 
 	for( var i=0; i<elem.length;i++ ){
-		elem[i].innerHTML = '';
-		// console.log( el[i] );
+        // borrara el contenido y añadira a celda vacia
+		elem[i].innerHTML = ''; 
+		console.log( elem[i] );
+        // removera la clase activo e inicia con el jugador 1
 		document.getElementById('player'+player).classList.remove('activo');
 		player = "X";
 		document.getElementById('player'+player).classList.add('activo');
 	}
+    
 	var inputs = document.getElementsByClassName('inputs');
-	for( var i=0; i<inputs.length;i++ ){
-		inputs[i].value = 0;
+    // Recorremos todos los inputs para que vuelvan al valor 0
+	for( var j=0; j<inputs.length;j++ ){
+		inputs[j].value = 0;
 	}
+    
 	counter = 0;
-
 };
+
+console.log(reset);
+
